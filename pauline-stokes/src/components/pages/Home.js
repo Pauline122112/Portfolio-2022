@@ -3,10 +3,12 @@ import '../../App.css'
 import MainSection from '../MainSection'
 
 
-export default function Home() {
+function Home() {
     return(
         <>
         <MainSection />
         </>
     )
 }
+
+export default Home
