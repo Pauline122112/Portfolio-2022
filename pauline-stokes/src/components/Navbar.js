@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faKiwiBird} from '@fortawesome/free-solid-svg-icons'
 import { Button } from './Button'
+import './Navbar.css'
 // import { faTypo3 } from '@fortawesome/free-brands-svg-icons'
 
 export default function Navbar() {
