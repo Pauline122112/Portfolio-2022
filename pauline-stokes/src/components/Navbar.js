@@ -2,15 +2,29 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faKiwiBird} from '@fortawesome/free-solid-svg-icons'
+import { Button } from './Button'
 // import { faTypo3 } from '@fortawesome/free-brands-svg-icons'
 
 export default function Navbar() {
 	const [click, setClick] = useState(false)
-	// setting the state to update and change it from whatever it was to whatever I want to change it to- this is for the menu. 
+	// setting the state to update and change it from whatever it was to whatever I want to change it to- this is for the menu.
+	const [button, setButton] = useState(true) 
 	const handleClick = () => setClick(!click)
 	//basically setting it to true or the opposite of what is in the useState
 	//Switches from hamburger icon to X
 	const closeMobileMenu = () => setClick(false)
+
+	const showButton = () => {
+		if(window.innerWidth <= 960) {
+			setButton(false)
+
+		} else {
+			setButton(true)
+		}
+	}
+
+	window.addEventListener('resize', showButton)
+
   return (
 		<>
 			<nav className="navbar">
@@ -50,6 +64,7 @@ export default function Navbar() {
 							</Link>
 						</li>
 					</ul>
+					{button && <Button buttonStyle='btn--outline'>MY WORK</Button>}
 				</div>
 			</nav>
 		</>
