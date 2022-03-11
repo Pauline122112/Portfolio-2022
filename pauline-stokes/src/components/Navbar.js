@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faKiwiBird} from '@fortawesome/free-solid-svg-icons'
@@ -24,13 +24,19 @@ export default function Navbar() {
 		}
 	}
 
+	//useEffect helps to render one time so that it does not show up again in regards to Navbar. 
+
+	useEffect(() => {
+		showButton()
+	}, [])
+
 	window.addEventListener('resize', showButton)
 
   return (
 		<>
 			<nav className="navbar">
 				<div className="navbar-container">
-					<Link to="/" className="navbar-logo">
+					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
 						{/* essentially the logo */}
 						PS
 						<FontAwesomeIcon icon={faKiwiBird}></FontAwesomeIcon>
@@ -55,15 +61,7 @@ export default function Navbar() {
 								About
 							</Link>
 						</li>
-						<li className="nav-item">
-							<Link
-								to="/contact"
-								className="nav-links"
-								onClick={closeMobileMenu}
-							>
-								Contact
-							</Link>
-						</li>
+						
 					</ul>
 					{button && <Button buttonStyle="btn--outline">Sign Up</Button>}
 				</div>

@@ -36,12 +36,12 @@
 
 .nav-menu {
   display: grid;
+  justify-content: flex-end;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: top;
   margin-right: 2rem;
 }
 
@@ -90,6 +90,9 @@
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    justify-content: flex-start;
+    
+   
   }
 
   .nav-menu.active {
