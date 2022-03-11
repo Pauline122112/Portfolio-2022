@@ -65,7 +65,7 @@ export default function Navbar() {
 							</Link>
 						</li>
 					</ul>
-					{button && <Button buttonStyle='btn--outline'>MY WORK</Button>}
+					{/* {button && <Button buttonStyle='btn--outline'>MY WORK</Button>} */}
 				</div>
 			</nav>
 		</>
