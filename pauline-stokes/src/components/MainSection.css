@@ -1,4 +1,4 @@
-#video {
+video {
     object-fit: cover;
   width: 100%;
   height: 100%;
@@ -7,7 +7,7 @@
 }
 
 .main-container {
- background: url('../../public/images/img-home.jpg') center center/cover no-repeat;
+ /* background: url('../../public/images/img-home.jpg') center center/cover no-repeat; */
   height: 100vh;
   width: 100%;
   display: flex;
