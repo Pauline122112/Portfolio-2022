@@ -2,7 +2,9 @@ import React from "react";
 import "../App.css";
 import { Button } from "./Button.js";
 import "./MainSection.css";
-import backgroundVideo from "./videos/video-2.mp4";
+import backgroundVideo from "./videos/video-3.mp4";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 function MainSection() {
 	return (
@@ -25,7 +27,7 @@ function MainSection() {
 					buttonSize="btn--large"
 					onClick={console.log("hey")}
 				>
-					WATCH TRAILER <i className="far fa-play-circle" />
+					WATCH TRAILER <FontAwesomeIcon icon={faPlayCircle}></FontAwesomeIcon>
 				</Button>
 			</div>
 		</div>
@@ -34,9 +36,8 @@ function MainSection() {
 
 export default MainSection;
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 
-	/* <FontAwesomeIcon icon={faPlayCircle}></FontAwesomeIcon> */
+
+	 
 
